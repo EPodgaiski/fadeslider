@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Fade Slider by GoreLite</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Fade Slider</h1>
+        <p></p>
+
+        <p class="view"><a href="https://github.com/GoreLite/fadeslider">View the Project on GitHub <small>GoreLite/fadeslider</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/GoreLite/fadeslider/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/GoreLite/fadeslider/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/GoreLite/fadeslider">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>Gorik: jQuery fade rotator
+Небольшой скрипт, в виде jQuery плагина, для быстрого переключения картинок fade эффектом. В связи с этим слайдер можно безболезненно внедрять в адаптивную вёрстку. По наведению на слайдер - он останавливается. Кнопки навигации вперёд/назад и блок для прямых переходов к слайду выглядят так:</p>
+
+<pre><code>  &lt;span class="rotator_nav left"&gt;&lt;i class="icon"&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;span class="rotator_nav right"&gt;&lt;i class="icon"&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;div class="rorator_move"&gt;&lt;/div&gt;
+</code></pre>
+
+<p>Подключение:
+Подключаем библиотеку jQuery 1.8+
+Подключаем плагин fade.rotate.js
+Подключаем скрипт для нужного нам элемента:</p>
+
+<pre><code>  $('document').ready(function(){
+    $('#mainRotatorId').fadeRotate();
+  });
+</code></pre>
+
+<p>Вся разметка рисуется в HTML. В будущем сделаю привязку css-классов.</p>
+
+<p>Параметры:
+duration - Время эфекта затухания в ms для элементов управления. Возможные значения от: 0. Значение по умолчанию: 500;
+autoDuration - Время эфекта затухания в ms для автоматического режима. Возможные значения от: 0. Значение по умолчанию: 1300;
+startTime - Время стартаанимации в ms впервые и после наведения мыши. Возможные значения от: 0. Значение по умолчанию: 5000;
+smalControls - Отображение блока с кнопками для быстрого перехода к нужному слайду. Возможные значения: true и false. Значение по умолчанию: true;</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/GoreLite">GoreLite</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
