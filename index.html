@@ -7,26 +7,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="HandheldFriendly" content="true">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <meta name="format-detection" content="telephone=no">
+  <link href="css/styles.css" rel="stylesheet">
   <!--[if IE 9]><link rel="stylesheet" href="css/ie9.css" type="text/css"><![endif]-->
-  <!--[if lte IE 8]><link rel="stylesheet" href="css/ie.css" type="text/css"><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" href="css/ie.css" type="text/css"><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
 
 <div class="main" id="top">
 
-  <div class="header">
+  <header>
     <div class="wrapper clearfix">
-      <a href="http://gorik.name/" title="домашняя страница Горика" class="logo">Some logo</a>
-      <div class="top_menu">
-        <a href="#01">Item 01</a>
-        <a href="#02">Item 02</a>
-        <a href="#03">Item 03</a>
-        <a href="#04">Item 04</a>
-        <a href="#05">Item 05</a>
-      </div>
+      <a href="http://egor-podgayskiy.moikrug.ru/" rel="nofollow" class="profile"><i class="icon"></i>Мой Круг</a>
+      <a href="http://www.linkedin.com/pub/egor-podgaiski/5b/9ba/977/en" rel="nofollow" class="profile"><i class="icon"></i>LinkedIn</a>
+      <a href="http://gorik.name" title="домашняя страница Горика" class="logo">I Am...</a>
     </div>
-  </div>
+  </header>
 
   <div class="content">
     <div class="wrapper">
@@ -69,8 +65,10 @@
           <div class="rorator_move"></div>
         </div>
 
-        <div class="description">
-          <h1>Gorik: jQuery fade rotator</h1>
+        <h1>Gorik: jQuery fade rotator</h1>
+
+        <section>
+          <h2>Описание:</h2>
           <p>Небольшой скрипт, в виде jQuery плагина, для быстрого переключения картинок fade эффектом. В связи с этим слайдер можно безболезненно внедрять в адаптивную вёрстку. По наведению на слайдер - он останавливается. Кнопки навигации вперёд/назад и блок для прямых переходов к слайду выглядят так:</p>
           <br>
           <pre>
@@ -78,40 +76,53 @@
     &lt;span class="rotator_nav right">&lt;i class="icon">&lt;/i>&lt;/span>
     &lt;div class="rorator_move">&lt;/div>
           </pre>
-          <h2>Подключение:</h2>
-          <ul>
-            <li>Подключаем библиотеку jQuery 1.8+</li>
-            <li>Подключаем плагин fade.rotate.js</li>
-            <li>Подключаем скрипт для нужного нам элемента:<br><br>
+      </section>
+
+      <section>
+        <h2>Подключение:</h2>
+
+        <ul>
+          <li>Подключаем библиотеку jQuery 1.10+</li>
+          <li>Подключаем плагин fade.rotate.js</li>
+          <li>Подключаем скрипт для нужного нам элемента:<br><br>
     <pre>
       $('document').ready(function(){
         $('#mainRotatorId').fadeRotate();
       });
     </pre>
-            </li>
-            <li>Вся разметка рисуется в HTML. В будущем сделаю привязку css-классов.</li>
-          </ul>
-          <h2>Параметры:</h2>
-          <p><b>duration</b> - Время эфекта затухания в ms для элементов управления. Возможные значения от: <i>0</i>. Значение по умолчанию: <i>500</i>;</p>
-          <p><b>autoDuration</b> - Время эфекта затухания в ms для автоматического режима. Возможные значения от: <i>0</i>. Значение по умолчанию: <i>1300</i>;</p>
-          <p><b>startTime</b> - Время стартаанимации в ms впервые и после наведения мыши. Возможные значения от: <i>0</i>. Значение по умолчанию: <i>5000</i>;</p>
-          <p><b>smalControls</b> - Отображение блока с кнопками для быстрого перехода к нужному слайду. Возможные значения: <i>true</i> и <i>false</i>. Значение по умолчанию: <i>true</i>;</p>
-          <h2>Ресурсы:</h2>
-          <p><a href="js/fade.rotate.js">Файл fade.rotate.js</a></p>
-        </div>
+          </li>
+          <li>Вся разметка рисуется в HTML. В будущем сделаю привязку css-классов.</li>
+          <li>Прописываем кастомные стили для .select (есть в примере в css/styles.css).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Параметры:</h2>
+
+        <p><b>duration</b> - Время эфекта затухания в ms для элементов управления. Возможные значения от: <i>0</i>. Значение по умолчанию: <i>500</i>;</p>
+        <p><b>autoDuration</b> - Время эфекта затухания в ms для автоматического режима. Возможные значения от: <i>0</i>. Значение по умолчанию: <i>1300</i>;</p>
+        <p><b>startTime</b> - Время стартаанимации в ms впервые и после наведения мыши. Возможные значения от: <i>0</i>. Значение по умолчанию: <i>5000</i>;</p>
+        <p><b>smalControls</b> - Отображение блока с кнопками для быстрого перехода к нужному слайду. Возможные значения: <i>true</i> и <i>false</i>. Значение по умолчанию: <i>true</i>;</p>
+      </section>
+
+      <section>
+        <h2>Ресурсы:</h2>
+
+        <p>Файл JS <a href="js/fade.rotate.js">fade.rotate.js</a></p>
+        <p>Файл CSS (стили для .main_banner и .rotator_body) <a href="css/styles.css">styles.css</a></p>
+      </section>
 
     </div>
-
   </div>
 
-  <div class="footer">
+  <footer>
     <div class="wrapper clearfix">
 
       <div class="creater">Creater: <a href="http://www.gorik.name/" target="_blank">I am ...</a></div>
       <div class="copy">&copy; This is footer</div>
 
     </div>
-  </div>
+  </footer>
 
 </div>
 

@@ -1,3 +1,5 @@
+a:hover, .footer a:hover{color:orange;}
+
 .btn_stl{
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF00a8ff', endColorstr='#FF0088ce',GradientType=0);
 }
@@ -14,4 +16,3 @@
 }
 
 .main{outline:2px solid #bebebe;}
-.search_field, .sidebar_box, .page_actions_btn.state_fixed{outline:1px solid #bebebe;}
