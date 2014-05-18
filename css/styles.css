@@ -212,9 +212,9 @@ h2{padding:10px 0; color:black; font-size:16px; line-height:1.2;}
 		.main_banner .title + .text{padding-top:15px;}
 	.main_banner .btn_stl{margin-top:25px;}
 
-.content li{padding:3px 0 2px 15px;}
-	.content li:before{content:''; display:block; width:4px; height:4px; position:absolute; margin:9px 0 0 -12px; background-color:orange;}
-	.content pre{margin:10px 0 8px;}
+section li{padding:3px 0 2px 15px;}
+	section li:before{content:''; display:block; width:4px; height:4px; position:absolute; margin:9px 0 0 -12px; background-color:orange;}
+	section pre{margin:10px 0 8px;}
 
 
 /* Footer
