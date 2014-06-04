@@ -1,5 +1,5 @@
 //******************************
-// Fade rotator v:1.0, 2013, jQuery plugin
+// Fade slider v:1.0, 2013, jQuery plugin
 // Creater: Egor Podgaiski, http://gorik.name/
 // Dual licensed under the MIT and GPL licenses:
 // http://www.opensource.org/licenses/mit-license.php
@@ -52,11 +52,14 @@
                 currentItem.fadeOut(autoDuration);
                 nexItem.fadeIn(autoDuration);
 
-                 moverBox.find('.mover[data-slide-id="'+ nexItem.attr("id") +'"]').addClass('sel').siblings().removeClass('sel');
-                 box.trigger('roratorChanged');
+                moverBox.find('.mover[data-slide-id="'+ nexItem.attr("id") +'"]').addClass('sel').siblings().removeClass('sel');
+                box.trigger('roratorChanged');
 
-                 if(!isStop)
-                    timeSHide = setTimeout(function() {runSlider(box, duration)},startTime);
+                if(!isStop){
+                    timeSHide = setTimeout(function(){
+                        runSlider(box, duration)
+                    },startTime);
+                }
             };
 
             if (box.length){
@@ -76,8 +79,7 @@
                         var li = $(el);
 
                         moverApp = mover.clone();
-
-                        if (li.is(':visible')){moverApp.addClass('sel')}
+                        if (li.is(':visible')){ moverApp.addClass('sel') }
                         moverApp.attr('data-slide-id', li.attr('id'));
                         moverBox.append(moverApp);
                     });
@@ -92,8 +94,11 @@
                         timeSHide = clearTimeout(timeSHide);
                     },
                     mouseleave: function(){
-                        if( (typeof timeSHide == 'undefined') && !isStop )
-                             timeSHide = setTimeout(function() { runSlider(box, duration) }, startTime);
+                        if( (typeof timeSHide == 'undefined') && !isStop ){
+                             timeSHide = setTimeout(function(){
+                                runSlider(box, duration)
+                            }, startTime);
+                        }
                     }
                 });
 
@@ -116,8 +121,7 @@
 
                         timeSHide = clearTimeout(timeSHide);
 
-                        if (currentEl.attr('id') != trgtId)
-                        {
+                        if (currentEl.attr('id') != trgtId){
                             el.addClass('sel').siblings().removeClass('sel');
                             in_progress.push(currentEl);
                             currentEl.fadeOut(duration);
@@ -143,7 +147,7 @@
                     timeSHide = clearTimeout(timeSHide);
 
                     if (btn.hasClass('right')){
-                        items.each(function(index, el) {
+                        items.each(function(index, el){
                             var li = $(el);
 
                             if (li.is(':visible')){
@@ -159,7 +163,7 @@
                     }
 
                     if (btn.hasClass('left')){
-                        items.each(function(index, el) {
+                        items.each(function(index, el){
                             var li = $(el);
 
                             counter++;
