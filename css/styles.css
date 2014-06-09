@@ -133,7 +133,7 @@ ul{list-style:none;}
 
 /* header
 ******************************/
-header{padding:10px; font:16px Georgia,'Times New Roman',Times,serif;}
+header{padding:10px 0; font:16px Georgia,'Times New Roman',Times,serif;}
 	header .wrapper{padding-bottom:25px; border-bottom:1px solid #e6e6e6;}
 	header a{color:black; text-shadow:1px 1px rgba(255,255,255,.7);}
 
