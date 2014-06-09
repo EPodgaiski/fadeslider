@@ -124,7 +124,7 @@ ul{list-style:none;}
 
 /* Main
 ******************************/
-.main{min-width:780px; max-width:1110px; min-height:100%; position:relative; margin:0 auto; background-color:#fdfdfd; 
+.main{min-width:320px; max-width:1110px; min-height:100%; position:relative; margin:0 auto; background-color:#fdfdfd; 
 	-webkit-box-shadow:0 0 6px RGBA(0,0,0,.15);
 	box-shadow:0 0 6px RGBA(0,0,0,.15);
 }
@@ -161,6 +161,7 @@ h2{padding:10px 0; color:black; font-size:16px; line-height:1.2;}
 
 	section + section{margin-top:20px;}
 
+/*THIS CSS*/
 .main_banner{position:relative; width:100%; height:480px; margin-bottom:40px; border-bottom:1px solid #dbdcdb;}
 .rotator_body{position:relative; width:100%; height:100%; overflow:hidden;}
 	.rotator_body > ul{position:relative; width:100%; height:100%;}
@@ -170,6 +171,7 @@ h2{padding:10px 0; color:black; font-size:16px; line-height:1.2;}
 		box-sizing:border-box;
 	}
 
+/*styles for arrows*/
 	.main_banner .rotator_nav{position:absolute; top:0; width:40px; height:100%; background:rgba(255,255,255,.5); opacity:0; cursor:pointer; z-index:10;}
 	.main_banner .rotator_nav.left{left:0;}
 		.main_banner .rotator_nav.left:before,
@@ -197,20 +199,22 @@ h2{padding:10px 0; color:black; font-size:16px; line-height:1.2;}
 		.main_banner .rotator_nav.right .icon:before{content:''; right:4px; height:24px; margin-top:-14px;}
 		.main_banner .rotator_nav.right .icon:after{content:''; right:8px; height:28px; margin-top:-16px;}
 
-
 		.main_banner:hover .rotator_nav{opacity:.5;}
 		.main_banner .rotator_nav:hover{opacity:1;}
 
+/*styles for buttons*/
 	.main_banner .rorator_move{position:absolute; bottom:20px; left:50%; width:50%; margin-left:-25%; text-align:center;}
 		.main_banner .mover{display:inline-block; width:10px; height:10px; background-color:#fff; border-radius:50%; opacity:.7; cursor:pointer;}
 		.main_banner .mover + .mover{margin-left:10px;}
 		.main_banner .mover.sel{background-color:#00A8FF;}
 
+/*styles for text*/
 	.main_banner .label{padding:100px 0 0 100px; max-width:400px;}
 	.main_banner .title{color:#fff; font-weight:bold; font-size:26px; text-transform:uppercase;}
 	.main_banner .text{font-size:18px; line-height:30px; color:#000; text-shadow:1px 1px 1px rgba(255,255,255,0.5);}
 		.main_banner .title + .text{padding-top:15px;}
 	.main_banner .btn_stl{margin-top:25px;}
+/*THIS CSS EOF*/
 
 section li{padding:3px 0 2px 15px;}
 	section li:before{content:''; display:block; width:4px; height:4px; position:absolute; margin:9px 0 0 -12px; background-color:orange;}
@@ -224,3 +228,16 @@ footer{position:absolute; bottom:0; left:0; height:70px; width:100%;}
 	footer a{color:gray;}
 	.creater{float:right; margin-right:10px;}
 	.footer a{color:gray;}
+
+/*Responce
+******************************/
+@media only screen and (max-width:767px){
+	h1{padding-bottom:15px; font-size:1.5em;}
+	pre{font-size:10px;}
+	.main_banner{height:250px;}
+	.main_banner .label{padding:20px 45px 0; max-width:100%;}
+	.main_banner .title{color:#fff; font-weight:bold; font-size:16px; text-transform:uppercase;}
+	.main_banner .text{font-size:14px; line-height:1.2; color:#000; text-shadow:1px 1px 1px rgba(255,255,255,0.5);}
+		.main_banner .title + .text{padding-top:15px;}
+	.main_banner .btn_stl{margin-top:25px;}
+}

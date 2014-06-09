@@ -69,17 +69,15 @@
 
         <section>
           <h2>Описание:</h2>
-          <p>Небольшой скрипт, в виде jQuery плагина, для быстрого переключения картинок fade эффектом. В связи с этим слайдер можно безболезненно внедрять в адаптивную вёрстку. По наведению на слайдер - он останавливается. Кнопки навигации вперёд/назад и блок для прямых переходов к слайду выглядят так:</p>
-          <br>
+          <p>Небольшой скрипт, в виде jQuery плагина, для быстрого переключения картинок fade эффектом. В связи с этим слайдер можно безболезненно внедрять в адаптивную вёрстку. По наведению на слайдер - он останавливается.</p>
+          <p>Кнопки навигации вперёд/назад и блок для прямых переходов к слайду выглядят так:</p>
           <pre>
-    &lt;span class="rotator_nav left">&lt;i class="icon">&lt;/i>&lt;/span>
-    &lt;span class="rotator_nav right">&lt;i class="icon">&lt;/i>&lt;/span>
-    &lt;div class="rorator_move">&lt;/div>
-          </pre>
-          <p>Резметка всего слайдера выглядит так:</p>
-          <br>
+    &lt;span class="rotator_nav left">&lt;/span>
+    &lt;span class="rotator_nav right">&lt;/span>
+    &lt;div class="rorator_move">&lt;/div></pre>
+          <p>Чистая разметка всего слайдера выглядит так:</p>
           <pre>
-    &lt;div class="main_banner" id="mainRotatorId">
+    &lt;div class="class_name" id="rotatorId">
       &lt;div class="rotator_body">
         &lt;ul>
           &lt;li class="slide" id="slide_1">
@@ -96,11 +94,30 @@
           &lt;/li>
         &lt;/ul>
       &lt;/div>
-      &lt;span class="rotator_nav left">&lt;i class="icon">&lt;/i>&lt;/span>
-      &lt;span class="rotator_nav right">&lt;i class="icon">&lt;/i>&lt;/span>
+      &lt;span class="rotator_nav left">&lt;/span>
+      &lt;span class="rotator_nav right">&lt;/span>
       &lt;div class="rorator_move">&lt;/div>
+    &lt;/div></pre>
+          <p>Минимальная разметка выглядит так:</p>
+          <pre>
+    &lt;div class="class_name" id="rotatorId">
+      &lt;div class="rotator_body">
+        &lt;ul>
+          &lt;li class="slide" id="slide_1">
+            &lt;!-- content -->
+          &lt;/li>
+          &lt;li class="slide" id="slide_2">
+            &lt;!-- content -->
+          &lt;/li>
+          &lt;li class="slide" id="slide_3">
+            &lt;!-- content -->
+          &lt;/li>
+          &lt;li class="slide" id="slide_4">
+            &lt;!-- content -->
+          &lt;/li>
+        &lt;/ul>
     &lt;/div>
-          </pre>
+    &lt;/div></pre>
       </section>
 
       <section>
@@ -109,15 +126,16 @@
         <ul>
           <li>Подключаем библиотеку jQuery 1.10+</li>
           <li>Подключаем плагин <a href="js/fade.slider.js">fade.slider.js</a></li>
-          <li>Подключаем скрипт для нужного нам элемента:<br><br>
+          <li>Подключаем скрипт для нужного нам элемента:<br>
     <pre>
       $('document').ready(function(){
-        $('#mainRotatorId').fadeRotate();
-      });
-    </pre>
+        $('#rotatorId').fadeRotate();
+      });</pre>
           </li>
           <li>Вся разметка рисуется вручную в HTML. Соответствено Css - тоже. Из-за эфекта Fade нет привязки к размерам слайдов.</li>
-          <li>Кастомные стили для слайдера есть в примере (<a href="css/styles.css">css/styles.css</a>).</li>
+          <li>Кастомные стили для слайдера есть в примере (<a href="css/styles.css">css/styles.css</a>).<br>
+            <span class="gray">* стили в css выделены /*THIS CSS*/</span>
+          </li>
         </ul>
       </section>
 
