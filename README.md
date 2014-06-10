@@ -1,4 +1,4 @@
-# Gorik: jQuery fade slider
+# jQuery fade slider
 Небольшой скрипт, в виде jQuery плагина, для быстрого переключения картинок fade эффектом. В связи с этим слайдер можно безболезненно внедрять в адаптивную вёрстку. По наведению на слайдер - он останавливается. 
 
 Кнопки навигации вперёд/назад и блок для прямых переходов к слайду выглядят так:
@@ -12,16 +12,16 @@
     <div class="class_name" id="rotatorId">
       <div class="rotator_body">
         <ul>
-          <li class="slide" id="slide_1">
+          <li class="slide">
             <!-- content -->
           </li>
-          <li class="slide" id="slide_2">
+          <li class="slide">
             <!-- content -->
           </li>
-          <li class="slide" id="slide_3">
+          <li class="slide">
             <!-- content -->
           </li>
-          <li class="slide" id="slide_4">
+          <li class="slide">
             <!-- content -->
           </li>
         </ul>
@@ -36,16 +36,16 @@
     <div class="class_name" id="rotatorId">
       <div class="rotator_body">
         <ul>
-          <li class="slide" id="slide_1">
+          <li>
             <!-- content -->
           </li>
-          <li class="slide" id="slide_2">
+          <li>
             <!-- content -->
           </li>
-          <li class="slide" id="slide_3">
+          <li>
             <!-- content -->
           </li>
-          <li class="slide" id="slide_4">
+          <li>
             <!-- content -->
           </li>
         </ul>
@@ -65,6 +65,8 @@ $('document').ready(function(){
  - Кастомные стили для слайдера есть в примере [css/styles.css](css/styles.css).
 
 ## Параметры:
+**auto** - Включение/отключение автоанимации слайдов. Возможные значения: _true_ и _false_. Значение по умолчанию: _true_;
+
 **duration** - Время эфекта затухания в ms для элементов управления. Возможные значения от: _0_. Значение по умолчанию: _500_;
 
 **autoDuration** - Время эфекта затухания в ms для автоматического режима. Возможные значения от: _0_. Значение по умолчанию: _1300_;

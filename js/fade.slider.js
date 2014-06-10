@@ -1,5 +1,5 @@
 //******************************
-// Fade slider v:1.0, 2013, jQuery plugin
+// Fade slider v:1.1, 2013, jQuery plugin
 // Creater: Egor Podgaiski, http://gorik.name/
 // Dual licensed under the MIT and GPL licenses:
 // http://www.opensource.org/licenses/mit-license.php
@@ -10,6 +10,7 @@
     $.fn.fadeRotate = function(args){
 
         var settings = $.extend({
+            auto : true, // Enable auto animation;
             duration : 500, // Effect duration;
             autoDuration : 1300, // Effect duration for autoslide;
             startTime : 5000, // Time for begin effect;
@@ -17,21 +18,22 @@
             hash : null // hash now is not use;
         }, args);
 
-        return this.each(function(){
+        return this.each(function(globalIndex){
 
             var box = $(this),
                 items = box.find('li'),
                 itemsTotal = items.length,
+                auto = settings.auto,
                 duration = settings.duration,
                 autoDuration = settings.autoDuration,
                 startTime = settings.startTime,
                 smalControls = settings.smalControls,
                 hash = settings.hash,
-                is_run = false,
                 isStop = false,
                 in_progress = [],
                 moverBox = box.find('.rorator_move'),
-                mover = null;
+                mover = null,
+                timeSHide = null;
 
             function runSlider(box, duration){
                 var currentItem = {},
@@ -63,6 +65,13 @@
             };
 
             if (box.length){
+
+                if(items.length < 2){
+                    box.find('.rotator_nav').hide();
+                    moverBox.hide();
+                    return;
+                }
+
                 items.css({'position':'absolute','display':'none', top:0, left:0});
 
                 if (hash == null){
@@ -78,7 +87,12 @@
                     items.each(function(index, el) {
                         var li = $(el);
 
+                        if (!li.attr('id')){
+                            li.attr('id', 'js_fadeRotate_' + globalIndex + '_slide_' + index);
+                        }
+
                         moverApp = mover.clone();
+
                         if (li.is(':visible')){ moverApp.addClass('sel') }
                         moverApp.attr('data-slide-id', li.attr('id'));
                         moverBox.append(moverApp);
@@ -88,6 +102,12 @@
                 else{
                     moverBox.hide();
                 }
+
+                if(duration <= 0){
+                    duration = 1;
+                }
+
+                if (auto){
 
                 box.on({
                     mouseenter: function(){
@@ -104,6 +124,7 @@
 
                 if(!isStop && (hash == null)){
                     timeSHide = setTimeout(function() { runSlider(box, duration) }, startTime);
+                }
                 }
 
                 box.find('.rorator_move .mover').on({
