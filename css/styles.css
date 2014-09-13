@@ -172,7 +172,11 @@ h2{padding:10px 0; color:black; font-size:16px; line-height:1.2;}
 	}
 
 /*styles for arrows*/
-	.main_banner .rotator_nav{position:absolute; top:0; width:40px; height:100%; background:rgba(255,255,255,.5); opacity:0; cursor:pointer; z-index:10;}
+	.main_banner .rotator_nav{position:absolute; top:0; width:40px; height:100%; background:rgba(255,255,255,.5); opacity:0; cursor:pointer; z-index:10;
+		-webkit-transition:opacity .3s;
+		-o-transition:opacity .3s;
+		transition:opacity .3s;
+	}
 	.main_banner .rotator_nav.left{left:0;}
 		.main_banner .rotator_nav.left:before,
 		.main_banner .rotator_nav.left:after,
@@ -204,7 +208,7 @@ h2{padding:10px 0; color:black; font-size:16px; line-height:1.2;}
 
 /*styles for buttons*/
 	.main_banner .rorator_move{position:absolute; bottom:20px; left:50%; width:50%; margin-left:-25%; text-align:center;}
-		.main_banner .mover{display:inline-block; width:10px; height:10px; background-color:#fff; border-radius:50%; opacity:.7; cursor:pointer;}
+		.main_banner .mover{display:inline-block; width:14px; height:14px; background-color:#fff; border-radius:50%; opacity:.7; cursor:pointer;}
 		.main_banner .mover + .mover{margin-left:10px;}
 		.main_banner .mover.sel{background-color:#00A8FF;}
 
@@ -228,6 +232,7 @@ footer{position:absolute; bottom:0; left:0; height:70px; width:100%;}
 	footer a{color:gray;}
 	.creater{float:right; margin-right:10px;}
 	.footer a{color:gray;}
+
 
 /*Responce
 ******************************/
